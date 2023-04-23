@@ -6,8 +6,8 @@
 # openinghours
 website that displays content during opening hours (ex. from 9am-5pm)
 
-inspiration/sources: https://codepen.io/lck/pen/KgZQVO
-
-https://www.walmart.com/ip/Neon-Open-Sign-with-Hours-of-Operation-Lighted-Business-Hours-Window-Display-Red-illumination-Number-Stickers-Not-Included-LEDOPCL02/620830446
+inspiration/sources:
+* https://codepen.io/lck/pen/KgZQVO
+* https://www.walmart.com/ip/Neon-Open-Sign-with-Hours-of-Operation-Lighted-Business-Hours-Window-Display-Red-illumination-Number-Stickers-Not-Included-LEDOPCL02/620830446
 
 
