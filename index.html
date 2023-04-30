@@ -1,146 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-</head>
+  <head>
+    <title>OPENING HOURS</title>
+  </head>
+  <style>
+    body {
+      margin: 0 50px;
+      font: 1em "Arial Narrow", Arial, sans-serif;
+      font-stretch: condensed;
+      background: black;
+    }
+    a {
+      font: 1em "Arial Narrow", Arial, sans-serif;
+      color: red;
+    }
+    h1,
+    h4 {
+      margin: 0;
+    }
 
-<style>
-body {
- margin: 0 50px;
- font: 1em 'Arial Narrow', Arial, sans-serif; 
- font-stretch: condensed;
- background: black 
-}
+    /* basic styles */
+    h1 {
+      margin: 0 0 10px;
+    }
 
-h1, h4 {
- margin: 0;
-}
+    div {
+      background: #261d1b;
+      border-radius: 2px;
+      color: red;
+      border: 10px solid #565354;
+      margin: 50px auto;
+      padding: 25px;
+      width: 13%;
+    }
+  </style>
 
-/* basic styles */
-h1 {
- margin: 0 0 10px;
-}
+  <section>
+    <div>
+      <h1>OPENING HOURS</h1>
+      <table>
+        <colgroup>
+          <col />
+          <col style="background-color: black; text-align: center" />
+          <col />
+          <col style="background-color: black; text-align: center" />
+        </colgroup>
+        <tbody>
+          <tr>
+            <td>MON</td>
+            <td>9:00</td>
+            <td style="text-align: center">TO</td>
+            <td>17:00</td>
+          </tr>
+          <tr>
+            <td>TUE</td>
+            <td>9:00</td>
+            <td style="text-align: center">TO</td>
+            <td>17:00</td>
+          </tr>
+          <tr>
+            <td>WED</td>
+            <td>9:00</td>
+            <td style="text-align: center">TO</td>
+            <td>17:00</td>
+          </tr>
+          <tr>
+            <td>THU</td>
+            <td>9:00</td>
+            <td style="text-align: center">TO</td>
+            <td>17:00</td>
+          </tr>
+          <tr>
+            <td>FRI</td>
+            <td>9:00</td>
+            <td style="text-align: center">TO</td>
+            <td>17:00</td>
+          </tr>
+          <tr>
+            <td>SAT</td>
+            <td>9:00</td>
+            <td style="text-align: center">TO</td>
+            <td>17:00</td>
+          </tr>
+          <tr>
+            <td>SUN</td>
+            <td>9:00</td>
+            <td style="text-align: center">TO</td>
+            <td>17:00</td>
+          </tr>
+        </tbody>
+      </table>
+      </br>
+      * based on the time of day from your browser.
+    </div>
+  </section>
 
-div {
- background: #261D1B;
- border-radius: 2px;
- color: red;
- border: 10px solid #565354;
- margin: 50px auto;
- padding: 25px;
- width: 13%;
-}
+  <body onload="showContent()">
+    <div id="content" style="display: none">email!!</div>
+  </body>
 
+  <script>
+    function showContent() {
+      var currentTime = new Date().getHours(); // get current hour of the day
+      var contentDiv = document.getElementById("content"); // get the div element with id "content"
 
-/* Only necessary for demonstration */
-
- .open:after,
- .closed:after {
-  color: red;
-  font-size: 4em;
-  position: absolute;
-  bottom: 1em;
-  left: 50%;
-  transform: translate(-50%, -50%);
- }
- 
- .open:after {
-  content: "email@me.com";
- }
- 
- .closed:after {
-  content: "please come back during opening hours";
- }
-
-/* backgrounds */
-.day {
- content: "OPEN";
-}
-
-.night {
- background-color: #2b2b2b;
-}
-
-
-</style>
-
-
-
-<section>
-  <div>
-    <h1>OPENING HOURS</h1>
-<table>
-  <colgroup>
-    <col>
-    <col style="background-color:white; text-align: center;">
-    <col>
-    <col style="background-color:white; text-align: center;">
-  </colgroup>
-  <tbody>
-    <tr>
-      <td>MON</td>
-      <td>9:00</td>
-      <td style="text-align: center;">TO</td>
-      <td>17:00</td>
-    </tr>
-       <tr>
-      <td>TUE</td>
-      <td>9:00</td>
-      <td style="text-align: center;">TO</td>
-      <td>17:00</td>
-    </tr>
-       <tr>
-      <td>WED</td>
-      <td>9:00</td>
-      <td style="text-align: center;">TO</td>
-      <td>17:00</td>
-    </tr>
-       <tr>
-      <td>THU</td>
-      <td>9:00</td>
-      <td style="text-align: center;">TO</td>
-      <td>17:00</td>
-    </tr>
-       <tr>
-      <td>FRI</td>
-      <td>9:00</td>
-      <td style="text-align: center;">TO</td>
-      <td>17:00</td>
-    </tr>
-       <tr>
-      <td>SAT</td>
-      <td>9:00</td>
-      <td style="text-align: center;">TO</td>
-      <td>17:00</td>
-    </tr>
-       <tr>
-      <td>SUN</td>
-      <td>9:00</td>
-      <td style="text-align: center;">TO</td>
-      <td>17:00</td>
-    </tr>
-  </tbody>
-</table>
-</br>
-    * based on the time of day from your browser.
-  </div>
-</section>
-
-
-	
-	
-<script>
-// needs jquery.min.js
-$(document).ready(function(){
-	var d = new Date();
-	var n = d.getHours();
-	if (n > 17 || n < 9)
- 		// If time is after 5PM (17:00) or before 9AM, apply closed theme to ‘body’
- 		document.body.className = "closed";
-	else
- 		// Else use ‘open’ theme
- 		document.body.className = "open";
-});
-</script>
-	
-	
+      // check if current hour is between 9am and 5pm
+      if (currentTime >= 9 && currentTime <= 20) {
+        contentDiv.style.display = "block"; // show content
+      } else {
+        contentDiv.style.display = "none"; // hide content
+      }
+    }
+  </script>
+</html>
